@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Gestión Empresarial</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-doc">
+            <div class="header-logo">
+                <img src="./media/img/SGE_Logo.png" alt="Logo SGE">
+            </div>
+            <div class="header-title-group">
+                <h1 class="header-title">Sistemas de Gestión Empresarial (ERP)</h1>
+                <p class="header-subtitle">Documentación y recursos para la gestión moderna de empresas</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <button id="menu-btn" class="menu-icon" aria-label="Abrir menú">&#9776;</button>
+        <ul id="main-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="informacion+.html" target="_blank">Mas información</a></li>
+            <li><a href="dolibarr.html" target="_blank">Ejemplo SGE</a></li>
+            <li style="margin-left:auto;">
+                <button id="darkModeToggle" aria-label="Activar/Desactivar modo oscuro"
+                    style="font-size:1.1rem; background:#232526; color:#fff; border:none; border-radius:6px; padding:8px 16px; cursor:pointer;">
+                    🌙 Modo oscuro
+                </button>
+            </li>
+        </ul>
+
+    </nav>
+
+    <main>
+        <section class="intro-flex">
+            <div class="intro-text">
+                <h2>¿Qué es un Sistema de Gestión Empresarial?</h2>
+                <p>Un sistema de gestión empresarial (SGE) es un software que integra y automatiza diferentes procesos
+                    dentro de una empresa. Su objetivo es mejorar la gestión de los recursos,
+                    datos y operaciones de un negocio, facilitando la toma de decisiones y la coordinación entre
+                    departamentos. Un ERP (Enterprise Resource Planning) es un tipo de SGE que abarca la gestión de
+                    todas las áreas del negocio.</p>
+            </div>
+            <div class="intro-img">
+                <img src="./media/img/image1.jpg" alt="image1">
+            </div>
+        </section>
+
+        <section class="segundo-flex">
+            <h2>Importancia de los ERP en las empresas modernas</h2>
+            <div class="card-container">
+                <div class="card">📊<br>Centralizar la información de la empresa</div>
+                <div class="card">🤖<br>Automatizar procesos repetitivos</div>
+                <div class="card">📈<br>Mejorar la toma de decisiones con datos en tiempo real</div>
+                <div class="card">🤝<br>Optimizar la colaboración entre departamentos</div>
+                <div class="card">💸<br>Reducir costes operativos</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Qué vamos a encontrar en esta página?</h2>
+            <p>En este sitio web encontrarás información detallada sobre:</p>
+            <ul class="temario-lista">
+                <li>¿Qué es un SGE? Tipos y características.</li>
+                <li>Instalación.</li>
+                <li>Administración y configuración.</li>
+                <li>Mecanismos de acceso seguro a la información. Roles y privilegios.</li>
+                <li>Elaboración de informes.</li>
+                <li>Exportación de información.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Lenguaje de Marcas SEG Marcos - Curso 2024/2025</p>
+        <p>IES Zaidín Vergeles</p>
+    </footer>
+
+    <script>
+        // Menú hamburguesa JS
+        document.getElementById('menu-btn').addEventListener('click', function () {
+            document.getElementById('main-menu').classList.toggle('show-menu');
+        });
+
+        // ---------------- MODO OSCURO ----------------
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) document.body.classList.add('dark-mode');
+
+        toggleBtn.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️ Modo claro';
+            } else {
+                toggleBtn.textContent = '🌙 Modo oscuro';
+            }
+        });
+
+        // Cambia el texto del botón según el modo inicial
+        if (document.body.classList.contains('dark-mode')) {
+            toggleBtn.textContent = '☀️ Modo claro';
+        }
+    </script>
+
+</body>
+
+</html>

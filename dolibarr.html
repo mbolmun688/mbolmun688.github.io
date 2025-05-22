@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de Dolibarr ERP/CRM</title>
+    <link rel="stylesheet" href="./css/dolibarr.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-doc">
+            <div class="header-logo">
+                <img src="./media/img/SGE_Logo.png" alt="Logo SGE">
+            </div>
+            <div class="header-title-group">
+                <h1 class="header-title">Dolibarr ERP/CRM</h1>
+                <p class="header-subtitle">Documentación y guía de uso del producto</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul id="main-menu">
+            <li>
+                <a href="index.html" class="back-link" aria-label="Volver al inicio">
+                    &#8592; Volver al inicio
+                </a>
+            </li>
+            <li style="margin-left:auto;">
+                <button id="darkModeToggle" aria-label="Activar/Desactivar modo oscuro"
+                    style="font-size:1.1rem; background:#232526; color:#fff; border:none; border-radius:6px; padding:8px 16px; cursor:pointer;">
+                    🌙 Modo oscuro
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro-flex">
+            <div class="intro-text">
+                <h2>¿Qué es Dolibarr?</h2>
+                <p>
+                    Dolibarr ERP/CRM es un software de gestión empresarial de código abierto que integra funcionalidades
+                    de ERP y CRM en una sola plataforma. Permite gestionar clientes, facturación, inventario, proyectos,
+                    recursos humanos y mucho más. Es fácil de instalar, usar y personalizar, y está orientado tanto a
+                    pequeñas como a medianas empresas.
+                </p>
+            </div>
+            <div class="intro-img">
+                <img src="./media/img/dolibarr-logo.webp" alt="Logo Dolibarr">
+            </div>
+        </section>
+
+        <section class="ejemplos-caracteristicas">
+            <div class="caracteristicas-col">
+                <h2>¿En qué sistemas está disponible Dolibarr?</h2>
+                <ul class="temario-lista">
+                    <li><strong>Linux:</strong> Muy recomendado para servidores (Debian, Ubuntu, CentOS, etc.).</li>
+                    <li><strong>Windows:</strong> Instalador disponible para entornos de pruebas y producción.</li>
+                    <li><strong>macOS:</strong> Puede instalarse mediante paquetes o usando Docker.</li>
+                    <li><strong>Cloud:</strong> Disponible en servicios cloud y como SaaS en <a
+                            href="https://saas.dolibarr.org/" target="_blank" rel="noopener">dolibarr.org</a>.</li>
+                    <li><strong>Docker:</strong> Imágenes oficiales para despliegue rápido en contenedores.</li>
+                </ul>
+            </div>
+            <div class="ejemplos-col">
+                <h2>Requisitos de hardware recomendados</h2>
+                <ul class="temario-lista">
+                    <li><strong>Procesador:</strong> 1 GHz o superior (recomendado 2 núcleos o más).</li>
+                    <li><strong>Memoria RAM:</strong> Mínimo 1 GB (recomendado 2 GB o más para varios usuarios).</li>
+                    <li><strong>Almacenamiento:</strong> 1 GB libre mínimo (SSD recomendado para mejor rendimiento).
+                    </li>
+                    <li><strong>Base de datos:</strong> MySQL/MariaDB (recomendado) o PostgreSQL.</li>
+                    <li><strong>Servidor web:</strong> Apache, Nginx o compatible con PHP.</li>
+                    <li><strong>PHP:</strong> Versión 7.0 o superior.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="ejemplos-caracteristicas">
+            <div class="caracteristicas-col">
+                <h2>Características principales</h2>
+                <ul class="temario-lista">
+                    <li>Gestión de clientes, proveedores y contactos.</li>
+                    <li>Facturación, presupuestos y pedidos.</li>
+                    <li>Control de inventario y almacenes.</li>
+                    <li>Gestión de proyectos y tareas.</li>
+                    <li>Gestión de recursos humanos y ausencias.</li>
+                    <li>Agenda, calendario y recordatorios.</li>
+                    <li>Modularidad y extensiones (módulos adicionales).</li>
+                    <li>Acceso web y multiusuario con permisos.</li>
+                </ul>
+            </div>
+            <div class="ejemplos-col">
+                <h2>Recursos y enlaces útiles</h2>
+                <ul class="temario-lista">
+                    <li>
+                        <a href="https://wiki.dolibarr.org/index.php/Inicio" target="_blank"
+                            rel="noopener">Documentación oficial de Dolibarr</a>
+                    </li>
+                    <li>
+                        <a href="https://demo.dolibarr.org/" target="_blank" rel="noopener">Demo online de Dolibarr</a>
+                    </li>
+                    <li>
+                        <a href="https://www.dolibarr.org/downloads/" target="_blank" rel="noopener">Descarga de
+                            Dolibarr</a>
+                    </li>
+                    <li>
+                        <a href="https://www.dolibarr.org/forum/" target="_blank" rel="noopener">Foro de la
+                            comunidad</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Dolibarr/dolibarr" target="_blank" rel="noopener">Repositorio en
+                            GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="solo-caja">
+            <h2>Ejemplo de flujo de trabajo en Dolibarr</h2>
+            <ol class="temario-lista">
+                <li>El usuario accede al panel y crea un nuevo cliente o selecciona uno existente.</li>
+                <li>Se genera un presupuesto y se envía al cliente.</li>
+                <li>El presupuesto aceptado se convierte en pedido y posteriormente en factura.</li>
+                <li>El sistema actualiza el inventario y registra el movimiento en almacén.</li>
+                <li>La factura se marca como pagada y se actualizan los informes financieros.</li>
+            </ol>
+        </section>
+
+        <section class="video-tutorial">
+            <h2>Video: Cómo instalar Dolibarr paso a paso</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/jhDOOT61o98?si=hJ4QIOa2-TxXJmPi"
+                    title="Cómo instalar Dolibarr" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="video-nota">
+                En este video se explica el proceso de instalación de Dolibarr en un entorno típico. Puedes pausar,
+                avanzar o retroceder.
+            </p>
+        </section>
+
+        <section class="video-tutorial">
+            <h2>Video: Configuración básica de Dolibarr</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/GMXjevTuKrY?si=18u0Q6kXMWvnhcM-"
+                    title="Configuración básica de Dolibarr" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="video-nota">
+                Este video muestra cómo realizar la configuración inicial de Dolibarr: datos de empresa, usuarios,
+                módulos y opciones básicas para empezar a trabajar.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Lenguaje de Marcas SEG Marcos - Curso 2024/2025</p>
+        <p>IES Zaidín Vergeles</p>
+    </footer>
+
+    <script>
+        // Botón modo oscuro
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) document.body.classList.add('dark-mode');
+
+        toggleBtn.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️ Modo claro';
+            } else {
+                toggleBtn.textContent = '🌙 Modo oscuro';
+            }
+        });
+
+        // Cambia el texto del botón según el modo inicial
+        if (document.body.classList.contains('dark-mode')) {
+            toggleBtn.textContent = '☀️ Modo claro';
+        }
+    </script>
+</body>
+</html>

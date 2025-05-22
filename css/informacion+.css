@@ -1,0 +1,510 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f7f8fa;
+}
+
+/* HEADER profesional */
+header {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-doc {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 32px 20px 32px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.header-logo {
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    margin-right: 18px;
+}
+
+.header-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.header-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.header-title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.header-subtitle {
+    font-size: 1.05rem;
+    color: #b0b6bc;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+/* NAV profesional */
+nav {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    position: relative;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    height: 56px;
+    min-height: 56px;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.05rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+    display: block;
+}
+
+nav a:hover,
+nav a:focus {
+    background: #fff2;
+    color: #b0b6bc;
+    outline: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 24px;
+    z-index: 1100;
+}
+
+.back-link {
+    font-size: 1.08rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+    text-decoration: none;
+}
+.back-link:hover,
+.back-link:focus {
+    background: #fff2;
+    color: #b0b6bc;
+    outline: none;
+}
+
+/* Flex para la intro - centrado */
+.intro-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+    padding: 32px 32px;
+    text-align: center;
+}
+
+.intro-text,
+.intro-img,
+.intro-flex > div:not(.intro-text):not(.intro-img) {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro-img {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.intro-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.15);
+    margin: 0 auto;
+}
+
+.intro-flex ul {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto 16px auto;
+    padding-left: 24px;
+}
+
+.intro-flex h2 {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+/* Tarjetas para segundo section */
+.segundo-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.segundo-flex h2 {
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin: 30px 0;
+}
+
+.card {
+    background: #f4f6fa;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    padding: 28px 22px;
+    min-width: 180px;
+    max-width: 220px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+    user-select: none;
+}
+.card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(44,62,80,0.18);
+}
+.card::first-line {
+    font-size: 2.2rem;
+}
+.card-desc {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Ejemplos y características en dos columnas */
+.ejemplos-caracteristicas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 40px auto 32px auto;
+    max-width: 1200px;
+    padding: 0 18px;
+}
+
+.ejemplos-caracteristicas > .caracteristicas-col,
+.ejemplos-caracteristicas > .ejemplos-col {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+    padding: 28px 32px 24px 32px;
+    flex: 1 1 0;
+    min-width: 290px;
+    max-width: 500px;
+}
+
+.ejemplos-caracteristicas h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+    color: #232526;
+    text-align: left;
+    padding-left: 0;
+}
+
+.ejemplos-caracteristicas .temario-lista {
+    padding-left: 22px;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.ejemplos-caracteristicas .temario-lista li {
+    margin-bottom: 10px;
+}
+
+.ejemplos-caracteristicas a {
+    color: #34495e;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.15s;
+}
+.ejemplos-caracteristicas a:hover {
+    color: #0078d4;
+}
+
+/* Tercer section: lista alineada a la izquierda y separación de h2 */
+section:last-of-type {
+    display: block;
+    max-width: 700px;
+    margin: 0 auto 32px auto;
+    padding: 0 18px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+}
+
+h2 {
+    margin-top: 32px;
+    margin-bottom: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-align: left;
+}
+
+.temario-lista {
+    margin-left: 0;
+    padding-left: 32px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.temario-lista li {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* FOOTER profesional */
+footer {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #b0b6bc;
+    text-align: center;
+    padding: 24px 0 16px 0;
+    font-size: 1rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 -2px 8px rgba(44,62,80,0.08);
+}
+
+/* ------------------ MODO OSCURO ------------------ */
+body.dark-mode {
+    background: #181a1b;
+    color: #e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer {
+    background: linear-gradient(90deg, #181a1b 0%, #232526 100%);
+    color: #e0e0e0;
+    border-color: #232526;
+}
+
+body.dark-mode .header-logo {
+    background: #232526;
+}
+
+body.dark-mode .intro-flex,
+body.dark-mode .segundo-flex,
+body.dark-mode .ejemplos-caracteristicas > .caracteristicas-col,
+body.dark-mode .ejemplos-caracteristicas > .ejemplos-col,
+body.dark-mode section:last-of-type {
+    background: #232526;
+    color: #e0e0e0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+body.dark-mode .card {
+    background: #2a2c2d;
+    color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .card-desc {
+    color: #ccc;
+}
+
+body.dark-mode .intro-img img {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode nav a {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode nav a:focus {
+    background: #fff2;
+    color: #b0b6bc;
+}
+
+body.dark-mode .back-link {
+    color: #e0e0e0;
+}
+
+body.dark-mode .back-link:hover,
+body.dark-mode .back-link:focus {
+    color: #b0b6bc;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #fff;
+}
+
+body.dark-mode .temario-lista li,
+body.dark-mode .ejemplos-caracteristicas .temario-lista li {
+    color: #ccc;
+}
+
+body.dark-mode .ejemplos-caracteristicas a {
+    color: #7ecfff;
+}
+
+body.dark-mode .ejemplos-caracteristicas a:hover {
+    color: #00bfff;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .header-doc {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 10px 14px 10px;
+        gap: 12px;
+    }
+    .header-logo {
+        margin-right: 0;
+        margin-bottom: 6px;
+    }
+    .header-title {
+        font-size: 1.3rem;
+    }
+    .intro-flex {
+        padding: 18px 8px;
+        gap: 20px;
+    }
+    .intro-img img {
+        max-width: 100%;
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .card {
+        width: 90%;
+        max-width: 350px;
+    }
+    nav ul {
+        padding: 0 10px;
+    }
+    .ejemplos-caracteristicas {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 6px;
+    }
+    .ejemplos-caracteristicas > div {
+        max-width: 100%;
+        padding: 20px 12px 16px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background: linear-gradient(90deg, #232526 0%, #414345 100%);
+        position: absolute;
+        top: 56px;
+        left: 0;
+        z-index: 1000;
+        padding: 0 0 10px 0;
+        min-height: unset;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    }
+    nav ul.show-menu {
+        display: flex;
+    }
+    nav li {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid #353535;
+    }
+    nav a {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 1.08rem;
+    }
+    nav {
+        position: relative;
+    }
+    .intro-flex {
+        padding: 12px 4px;
+    }
+    section:last-of-type {
+        padding: 0 8px;
+    }
+}
