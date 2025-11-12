@@ -2,16 +2,320 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Página Antigua</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SistemPro IT | Administración y Soporte de Infraestructuras</title>
+    <style>
+        /* ==================================== */
+        /* ESTILOS CSS BASE (CORPORATIVO ASIR) */
+        /* ==================================== */
+
+        :root {
+            --color-principal: #0056b3; /* Azul corporativo fuerte */
+            --color-secundario: #495057; /* Gris oscuro para texto */
+            --color-acento: #28a745; /* Verde para éxito/CTA */
+            --color-fondo-claro: #f8f9fa;
+            --color-fondo-blanco: #ffffff;
+            --fuente-principal: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            --sombra-elevacion: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: var(--fuente-principal);
+            background-color: var(--color-fondo-claro);
+            color: var(--color-secundario);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* ==================================== */
+        /* LAYOUT & ESTRUCTURA */
+        /* ==================================== */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--color-fondo-blanco);
+            border-bottom: 4px solid var(--color-principal);
+            box-shadow: var(--sombra-elevacion);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        /* Títulos */
+        h1 {
+            font-size: 3.2em;
+            color: var(--color-principal);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: var(--color-secundario);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-principal);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            color: var(--color-principal);
+            font-size: 1.5em;
+        }
+
+        /* NAVEGACIÓN */
+        nav {
+            float: right;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 25px;
+        }
+        nav ul li a {
+            color: var(--color-secundario);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 0;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--color-principal);
+            border-bottom: 2px solid var(--color-principal);
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: var(--color-principal);
+            float: left;
+        }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* ==================================== */
+        /* COMPONENTES DE SERVICIOS */
+        /* ==================================== */
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--color-fondo-blanco);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        /* Botón CTA principal */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-acento);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 20px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+        }
+        .cta-button:hover {
+            background-color: #1e7e34;
+            transform: translateY(-2px);
+        }
+
+        /* Cards de Servicios */
+        .servicios-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .service-card {
+            background-color: var(--color-fondo-blanco);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--sombra-elevacion);
+            width: calc(33% - 30px); /* 3 cards por fila en desktop */
+            min-width: 300px;
+            transition: transform 0.3s;
+            border-left: 5px solid var(--color-principal);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            border-bottom: 1px dashed var(--color-borde-claro);
+            padding-bottom: 10px;
+        }
+        
+        /* Iconografía simulada */
+        .icon {
+            font-size: 2em;
+            color: var(--color-principal);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* Seccion de contacto */
+        #contacto {
+            background-color: var(--color-principal);
+            color: white;
+            text-align: center;
+        }
+        #contacto h2 {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: var(--color-secundario);
+            color: var(--color-fondo-claro);
+            font-size: 0.9em;
+        }
+        footer a {
+            color: var(--color-principal);
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
-    <p>Serás redirigido en breve...</p>
+    <header>
+        <div class="container clearfix">
+            <div class="logo">SistemPro IT</div>
+            <nav>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#mantenimiento">Mantenimiento</a></li>
+                    <li><a href="#seguridad">Seguridad</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Infraestructura IT Optimizada y Segura</h1>
+            <p style="font-size: 1.4em; color: var(--color-secundario);">
+                Administración integral de sistemas y redes para PYMES. **Soluciones robustas** basadas en estándares profesionales (ASIR).
+            </p>
+            <p>
+                <a href="#servicios" class="cta-button">Ver Portafolio de Servicios</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios de Administración de Sistemas</h2>
+            <div class="servicios-grid">
+                
+                <div class="service-card">
+                    <span class="icon">📁</span>
+                    <h3>Administración de Servidores</h3>
+                    <p>Instalación, configuración y gestión de sistemas operativos de servidor (Windows Server, Linux). Incluye virtualización con VMware/Hyper-V y servicios de Directorio Activo (AD).</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">🌐</span>
+                    <h3>Diseño y Gestión de Redes</h3>
+                    <p>Planificación de infraestructura LAN/WAN. Configuración avanzada de switches, routers y VLANs. Implementación de protocolos TCP/IP, DNS, DHCP y VPNs seguras.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">💾</span>
+                    <h3>Sistemas de Copia de Seguridad (Backup)</h3>
+                    <p>Diseño e implementación de políticas de Backup & Disaster Recovery. Soluciones 3-2-1, copias en la nube (Cloud) y pruebas periódicas de restauración de datos críticos.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">📞</span>
+                    <h3>Soporte Técnico y Helpdesk</h3>
+                    <p>Asistencia remota y presencial (Nivel 1, 2 y 3) para usuarios y equipos. Resolución rápida de incidencias de hardware, software y conectividad. Gestión de tickets ITIL.</p>
+                </div>
+                
+                <div class="service-card">
+                    <span class="icon">🛡️</span>
+                    <h3>Ciberseguridad Perimetral</h3>
+                    <p>Gestión de Firewalls (Fortinet, PfSense) y políticas de seguridad. Protección contra Malware, Ransomware y ataques DoS. Auditorías de vulnerabilidad periódicas.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">📊</span>
+                    <h3>Gestión de Bases de Datos y NAS/SAN</h3>
+                    <p>Administración de servidores de bases de datos (SQL Server, MySQL). Mantenimiento y optimización de sistemas de almacenamiento centralizado (NAS y SAN).</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
     
-    <script>
-        // Redirige inmediatamente
-        window.location.href = "https://github.com/mbolmun688";
-    </script>
+    <section id="mantenimiento" style="background-color: var(--color-fondo-blanco);">
+        <div class="container">
+            <h2>Planes de Mantenimiento Preventivo</h2>
+            <p style="text-align: center; font-size: 1.1em; max-width: 800px; margin: 0 auto 40px;">
+                Nuestro enfoque se basa en la **prevención** para garantizar la continuidad del negocio y la máxima disponibilidad de sus sistemas 24/7.
+            </p>
+            
+            <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: space-around;">
+                <li style="width: 45%; margin-bottom: 20px;">✅ Monitorización Proactiva 24/7.</li>
+                <li style="width: 45%; margin-bottom: 20px;">✅ Gestión de Parches y Actualizaciones (WSUS).</li>
+                <li style="width: 45%; margin-bottom: 20px;">✅ Optimización y Limpieza de Servidores.</li>
+                <li style="width: 45%; margin-bottom: 20px;">✅ Informes de Rendimiento y Capacidad (Capacity Planning).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>¿Listo para Optimizar su Infraestructura IT?</h2>
+            <p style="font-size: 1.3em;">
+                Solicite una auditoría gratuita y descubra cómo podemos profesionalizar la administración de sus sistemas.
+            </p>
+            <p style="margin-top: 30px;">
+                <a href="mailto:contacto@sistempro-it.com" class="cta-button" style="background-color: #ffc107; color: var(--color-secundario); box-shadow: 0 4px 10px rgba(255, 193, 7, 0.5);">Contactar Ahora</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SistemPro IT | Servicios Profesionales de Administración de Sistemas. | <a href="#">Aviso Legal</a></p>
+        </div>
+    </footer>
 
 </body>
 </html>
